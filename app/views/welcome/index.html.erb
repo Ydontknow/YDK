@@ -16,16 +16,6 @@
       </p>
 
       <h1>Cloning this app</h1>
-      <p>
-      Open your command prompt and login to heroku with our email and password.
-      </p>
-      <pre class="language-term">
-        <code class=" language-term">
-<span class="token-prompt">$  </span><span class="token-input">heroku login</span><span class="output">
-Enter your Heroku credentials.
-Email: schneems@example.com
-Password:**********</span></code>
-      </pre>
 
       <p>
         before you clone the app repository first be sure to cd to the location where you want to download the app folder.
@@ -37,21 +27,42 @@ Password:**********</span></code>
       </pre>
 
       <p>
-        To download the app type in the following command and press enter.
+        Now clone the depository.
       </p>
+
       <pre class="language-term">
         <code class=" language-term">
-<span class="token-prompt">$  </span><span class="token-input">heroku git:clone -a obscure-retreat-65464</span></code>
+<span class="token-prompt">$  </span><span class="token-input">git clone https://github.com/Ydontknow/YDK</span></code>
       </pre>
 
       <p>
-        When you want to make changes to the app (before you commit your changes to the server) make your own branch.
+        before you make any changes make a new branch.
       </p>
+
+
       <pre class="language-term">
         <code class=" language-term">
-<span class="token-prompt">$  </span><span class="token-input">heroku git:checkout -b iss53</span></code>
+<span class="token-prompt">$  </span><span class="token-input">git checkout -b branch-name</span></code>
       </pre>
 
+      <p>
+        When you've made changes commit them using the following command.
+      </p>
+
+      <pre class="language-term">
+        <code class=" language-term">
+<span class="token-prompt">$  </span><span class="token-input">git commit -a -m "descriptive comment on the changes you've made"</span></code>
+      </pre>
+
+      <p>
+        Then proceed by pushing the commit to the remote branch you've made
+      </p>
+
+
+      <pre class="language-term">
+        <code class=" language-term">
+<span class="token-prompt">$  </span><span class="token-input">git push origin branch-name"</span></code>
+      </pre>
 
     </div>
   </body>
