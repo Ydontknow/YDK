@@ -1,3 +1,58 @@
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>clone this app</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Setup</h1>
+      <p>
+        To start off you first need to install the <a href="https://toolbelt.heroku.com/" target="_blank">Heroku Toolbelt</a> to make sure that you have acces to the <a href="https://devcenter.heroku.com/categories/command-line" target="_blank">Heroku command-line client</a>.
+      </p>
+      <br>
+      <p>
+        Next to that you need a locally installed version of Ruby 2.2.0+, Rubygems, Bundler, and Rails 5+. use <a href="https://rubyinstaller.org" target="_blank">this installer</a> or see <a href="https://medium.com/ruby-on-rails-web-application-development/how-to-install-rubyonrails-on-windows-7-8-10-complete-tutorial-2017-fc95720ee059">this guide</a> for more info.
+      </p>
+
+      <h1>Cloning this app</h1>
+      <p>
+      Open your command prompt and login to heroku with our email and password.
+      </p>
+      <pre class="language-term">
+        <code class=" language-term">
+<span class="token-prompt">$  </span><span class="token-input">heroku login</span><span class="output">
+Enter your Heroku credentials.
+Email: schneems@example.com
+Password:**********</span></code>
+      </pre>
+
+      <p>
+        before you clone the app repository first be sure to cd to the location where you want to download the app folder.
+      </p>
+
+      <pre class="language-term">
+        <code class=" language-term">
+<span class="token-prompt">$  </span><span class="token-input">cd C:/download-repository</span></code>
+      </pre>
+
+      <p>
+        To download the app type in the following command and press enter.
+      </p>
+      <pre class="language-term">
+        <code class=" language-term">
+<span class="token-prompt">$  </span><span class="token-input">heroku git:clone -a obscure-retreat-65464</span></code>
+      </pre>
+
+      <p>
+        When you want to make changes to the app (before you commit your changes to the server) make your own branch.
+      </p>
+      <pre class="language-term">
+        <code class=" language-term">
+<span class="token-prompt">$  </span><span class="token-input">heroku git:checkout -b iss53</span></code>
+      </pre>
+
+
+    </div>
+  </body>
+</html>

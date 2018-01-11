@@ -1,3 +1,53 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.token-prompt {
+  color: #bb9fff;
+}
+
+.token-input {
+  font-weight: bold;
+}
+
+.output {
+  opacity: 0.8;
+}
+
+a {
+  text-decoration: none;
+  color: #00A1DF;
+}
+
+code {
+  font-family: 'Roboto-Mono', sans-serif;
+}
+
+pre {
+  padding-left: 20px;
+  font-size: 16px;
+  background: #333;
+  color: #FFF;
+  line-height: 21px;
+  border-radius: 8px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 0px 10px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  margin-left: 9px;
+  margin-bottom: 0;
+}
