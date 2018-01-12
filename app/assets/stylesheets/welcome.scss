@@ -100,3 +100,9 @@ h1 {
     line-height: 12px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  body {
+    background: #bb9fff;
+  }
+}
