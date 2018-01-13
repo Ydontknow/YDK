@@ -23,3 +23,25 @@ $secondary-color: color("yellow", "base") !default;
 .nav-wrapper {
   padding-left: 20px !important;
 }
+
+body {
+  padding-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #00A1DF;
+}
+
+code {
+  font-family: 'Roboto-Mono', sans-serif;
+}
+
+pre {
+  padding-left: 20px;
+  font-size: 16px;
+  background: #333;
+  color: #FFF;
+  line-height: 21px;
+  border-radius: 8px;
+}
