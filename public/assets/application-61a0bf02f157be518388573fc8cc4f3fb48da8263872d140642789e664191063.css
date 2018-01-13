@@ -22,11 +22,13 @@ a {
 /* line 22, E:/Ruby Projects/YDK/app/assets/stylesheets/welcome.scss */
 code {
   font-family: 'Roboto-Mono', sans-serif;
+  margin-right: 20px;
 }
 
 /* line 26, E:/Ruby Projects/YDK/app/assets/stylesheets/welcome.scss */
 pre {
   padding-left: 20px;
+  padding:right 20px;
   font-size: 16px;
   background: #333;
   color: #FFF;
