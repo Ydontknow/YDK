@@ -9,10 +9,18 @@
   </head>
 
   <body>
-    <nav>
-     <div class="nav-wrapper">
-       <a href="#" class="brand-logo">Logo</a>
-     </div>
+    <nav class="nav-extended">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Logo</a>
+      </div>
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a href="#">Test 1</a></li>
+          <li class="tab"><a href="#">Test 2</a></li>
+          <li class="tab"><a href="#">Test 3</a></li>
+          <li class="tab"><a href="#">Test 4</a></li>
+        </ul>
+      </div>
     </nav>
     <%= yield %>
   </body>
