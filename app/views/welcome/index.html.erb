@@ -2,7 +2,7 @@
   <div class="nav-wrapper">
     <a href="#" class="brand-logo left">Logo</a>
     <ul class="right">
-      <li><%= link_to "instructions", root_path %></li>
+      <li class="active"><%= link_to "instructions", root_path %></li>
         <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
           <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
@@ -17,11 +17,11 @@
 <div class="container">
       <h3>Setup</h3>
       <p>
-        To start off you first need to install the <a href="https://toolbelt.heroku.com/" target="_blank">Heroku Toolbelt</a> to make sure that you have acces to the <a href="https://devcenter.heroku.com/categories/command-line" target="_blank">Heroku command-line client</a>.
+        To start off you first need to install the <a class="link" href="https://toolbelt.heroku.com/" target="_blank">Heroku Toolbelt</a> to make sure that you have acces to the <a class="link" href="https://devcenter.heroku.com/categories/command-line" target="_blank">Heroku command-line client</a>.
       </p>
       <br>
       <p>
-        Next to that you need a locally installed version of Ruby 2.2.0+, Rubygems, Bundler, and Rails 5+. use <a href="https://rubyinstaller.org" target="_blank">this installer</a> and check out <a href="https://medium.com/ruby-on-rails-web-application-development/how-to-install-rubyonrails-on-windows-7-8-10-complete-tutorial-2017-fc95720ee059">this guide</a> for more info.
+        Next to that you need a locally installed version of Ruby 2.2.0+, Rubygems, Bundler, and Rails 5+. use <a class="link" href="https://rubyinstaller.org" target="_blank">this installer</a> and check out <a href="https://medium.com/ruby-on-rails-web-application-development/how-to-install-rubyonrails-on-windows-7-8-10-complete-tutorial-2017-fc95720ee059">this guide</a> for more info.
       </p>
 
       <h3>Cloning this app</h3>
@@ -74,12 +74,12 @@
       </pre>
 
       <p>
-        Also visit the git repository on <a href="https://github.com/Ydontknow/YDK" target="_blank">github</a>.
+        Also visit the git repository on <a class="link" href="https://github.com/Ydontknow/YDK" target="_blank">github</a>.
       </p>
 
       <h3>Rails Tips</h3>
       <p>
-        To test out your app localy execute the following command in the app repository. You can acces your local server at <a href="http://localhost:3000" target="_blank">localhost:3000</a>.
+        To test out your app localy execute the following command in the app repository. You can acces your local server at <a class="link" href="http://localhost:3000" target="_blank">localhost:3000</a>.
       </p>
 
       <pre class="language-term">
@@ -90,6 +90,6 @@
       <h3>Materialize
       <a href="http://materializecss.com"><%= image_tag('materialize.png', width:'70', class:'materialize-logo')%></a></h3>
       <p>
-        The Materialize-sass gem is installed in this app so you can use materialize classes in your html. For more information check the materialize <a href="http://materializecss.com">documentation</a>
+        The Materialize-sass gem is installed in this app so you can use materialize classes in your html. For more information check the materialize <a class="link" href="http://materializecss.com">documentation</a>
       </p>
 </div>
