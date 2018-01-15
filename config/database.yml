@@ -22,8 +22,14 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
+  adapter: postgresql
   database: YDK_development
+  username: postgres
+  password: postgres
+  host: localhost
+  encoding: UTF8
+  pool: 5
+  timeout: 5000
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +64,8 @@ development:
 test:
   <<: *default
   database: YDK_test
+  username: postgres
+  password: postgres
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

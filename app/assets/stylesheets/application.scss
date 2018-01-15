@@ -15,22 +15,13 @@
  */
 @import "materialize/components/color";
 $primary-color: color("blue-grey", "darken-4") !default;
-$secondary-color: color("yellow", "base") !default;
+$secondary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-.nav-wrapper {
-  padding-left: 20px !important;
-}
-
 body {
   padding-bottom: 50px;
-}
-
-a {
-  text-decoration: none;
-  color: #00A1DF;
 }
 
 code {
@@ -43,5 +34,41 @@ pre {
   color: #FFF;
   line-height: 21px;
   border-radius: 8px;
-  @extend .blue-grey, .darken-4
+  @extend .blue-grey, .darken-4;
+}
+
+.nav-wrapper {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.link {
+  text-decoration: none;
+  @extend .blue-text, .text-lighten-2;
+}
+
+.token-prompt {
+  @extend .blue-text, .text-lighten-2;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.toast {
+  padding: 0px 10px;
+  border-radius: 4px;
+
+  ul {
+    margin-bottom: 5px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.toast {
+  @extend .red, .lighten-2;
 }
