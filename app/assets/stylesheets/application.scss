@@ -67,8 +67,10 @@ pre {
   li {
     margin-bottom: 10px;
   }
+
+  @extend .red, .lighten-2;
 }
 
-.toast {
-  @extend .red, .lighten-2;
+.title {
+  margin-bottom: 10px !important;
 }
