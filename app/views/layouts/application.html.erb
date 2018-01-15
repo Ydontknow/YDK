@@ -10,10 +10,14 @@
 
   <body>
     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+    <script type="text/javascript">
+      Materialize.toast('<%= notice %>', 6000, 'alert alert-success')
+    </script>
     <% end %>
     <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <script type="text/javascript">
+        Materialize.toast('<%= alert %>', 6000, 'alert alert-danger')
+      </script>
     <% end %>
     <%= yield %>
   </body>
