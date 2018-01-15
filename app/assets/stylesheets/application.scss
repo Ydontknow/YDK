@@ -20,15 +20,6 @@ $secondary-color: color("blue", "lighten-2") !default;
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-.nav-wrapper {
-  padding-left: 20px !important;
-}
-
-.link {
-  text-decoration: none;
-  @extend .blue-text, .text-lighten-2;
-}
-
 body {
   padding-bottom: 50px;
 }
@@ -44,6 +35,16 @@ pre {
   line-height: 21px;
   border-radius: 8px;
   @extend .blue-grey, .darken-4;
+}
+
+.nav-wrapper {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.link {
+  text-decoration: none;
+  @extend .blue-text, .text-lighten-2;
 }
 
 .token-prompt {
