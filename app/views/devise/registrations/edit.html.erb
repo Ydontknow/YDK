@@ -3,42 +3,62 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
-      <h3 class="col s12">Edit <%= resource_name.to_s.humanize %></h3>
+      <h3 class="">Edit <%= resource_name.to_s.humanize %></h3>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
 
-        <div class="input-field col s12">
+        <div class="input-field">
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'validate' %>
           <%= f.label :email, data: {error: 'please fill in a valid email'} %>
         </div>
 
-        <div class="input-field col s12">
-          <%= f.text_field :username %>
-          <%= f.label :username %>
+        <div class="input-field">
+          <%= f.text_field :first_name %>
+          <%= f.label :first_name %>
+        </div>
+
+        <div class="input-field">
+          <%= f.text_field :last_name %>
+          <%= f.label :last_name %>
+        </div>
+
+        <div class="input-field">
+          <%= f.text_field :skills %>
+          <%= f.label :skills %>
+        </div>
+
+
+        <div class="input-field">
+          <%= f.text_area :bio, id: 'textarea_bio', class: 'materialize-textarea validates', data: {length: '100'} %>
+          <%= f.label :bio, 'Bio, Tell something about yourself' %>
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
 
-        <div class="input-field col s12">
+        <div class="input-field">
           <%= f.password_field :current_password, autocomplete: "off" %>
           <%= f.label :current_password %>
         </div>
 
-        <div class="input-field col s12">
+        <div class="actions">
+          <%= f.submit "Update Profile", class: 'waves-effect waves-light btn' %>
+        </div>
+
+        <div class="input-field">
           <%= f.password_field :password, autocomplete: "off" %>
           <%= f.label :password, 'New password' %>
         </div>
 
-        <div class="input-field col s12">
+        <div class="input-field">
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
           <%= f.label :password_confirmation %>
         </div>
 
-        <div class="actions col s12">
-          <%= f.submit "Update profile", class: 'waves-effect waves-light btn' %>
+        <div class="actions">
+          <%= f.submit "Update password", class: 'waves-effect waves-light btn' %>
           <p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'red-text text-lighten-2' %></p>
         </div>
       <% end %>
@@ -51,5 +71,9 @@
 $(document).ready(function() {
   Materialize.updateTextFields();
 });
+
+$(document).ready(function() {
+    $('input#input_text, textarea#textarea_bio').characterCounter();
+  });
 
 </script>

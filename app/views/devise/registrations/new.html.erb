@@ -3,31 +3,36 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
-        <h3 class="title col s12">Sign up</h3>
+        <h3 class="title">Sign up</h3>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
-          <div class="input-field col s12">
+          <div class="input-field">
             <%= f.email_field :email, autofocus: true, autocomplete: "off", class: 'validate' %>
             <%= f.label :email, data: {error: 'please fill in a valid email'} %>
           </div>
 
-          <div class="input-field col s12">
-            <%= f.text_field :username %>
-            <%= f.label :username %>
+          <div class="input-field">
+            <%= f.text_field :first_name %>
+            <%= f.label :first_name %>
           </div>
 
-          <div class="input-field col s12">
+          <div class="input-field">
+            <%= f.text_field :last_name %>
+            <%= f.label :last_name %>
+          </div>
+
+          <div class="input-field">
             <%= f.password_field :password, autocomplete: "off" %>
             <%= f.label :password %>
           </div>
 
-          <div class="input-field col s12">
+          <div class="input-field">
             <%= f.password_field :password_confirmation, autocomplete: "off" %>
             <%= f.label :password_confirmation %>
           </div>
 
-          <div class="actions col s12">
+          <div class="actions">
             <%= f.submit "Sign up", class: 'waves-effect waves-light btn' %><%= render "devise/shared/links" %>
           </div>
         <% end %>
