@@ -6,6 +6,9 @@
         <%= link_to "instructions", root_path %>
       <% end %>
       <% if user_signed_in? %>
+        <% if current_user.username.empty? %>
+          <% current_user.username = current_user.email[/[^@]+/] %>
+        <% end %>
         <%= content_tag :li, :class => ('active' if current_page?('/user/edit')) do %>
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
         <% end %>
@@ -13,7 +16,9 @@
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
         </li>
         <li class="hide-on-small-only">
-          Logged in as <strong class="current-user"><%= current_user.username %></strong>
+          Logged in as <strong class="current-user">
+            <%= current_user.username %>
+          </strong>
         </li>
         <% else %>
           <%= content_tag :li, :class => ('active' if current_page?('/user/sign_up')) do %>
