@@ -1,0 +1,7 @@
+<%= render partial: '/layouts/navbar' %>
+
+<% @users = User.all %>
+<% @users.each do |user| %>
+  <%= user.first_name %><br/>
+  <%= user.email %><br/>
+<% end %>

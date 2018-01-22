@@ -24,13 +24,13 @@
         </div>
 
         <div class="input-field">
-          <%= f.text_field :skills %>
+          <%= f.text_field :skills, data: {length: '128'}%>
           <%= f.label :skills %>
         </div>
 
 
         <div class="input-field">
-          <%= f.text_area :bio, id: 'textarea_bio', class: 'materialize-textarea validates', data: {length: '100'} %>
+          <%= f.text_area :bio, id: 'textarea_bio', class: 'materialize-textarea validates', data: {length: '256'} %>
           <%= f.label :bio, 'Bio, Tell something about yourself' %>
         </div>
 

@@ -1,0 +1,31 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  padding-top: 20px;
+}
+
+.card {
+  height: 80vh !important;
+}
+
+.card-top {
+  padding: 20px;
+  min-height: 100px;
+}
+
+.card-content {
+  padding-top: 40px !important;
+}
+
+.profile-img {
+  margin: 10px 20px;
+}
+
+.name {
+  margin-right: 10px;
+}
+
+.skills  {
+  margin-top: 20px !important;
+}

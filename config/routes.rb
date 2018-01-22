@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
+
+  get 'users/show'
+
   devise_for :user, controllers: {
   passwords: 'users/passwords',
   registrations: 'users/registrations',
   sessions: 'users/sessions'
-  }, skip: [:sessions]
+  }, skip: [:sessions], :path_prefix => 'd'
 
   as :user do
     get 'login' => 'users/sessions#new', as: :new_user_session
@@ -15,5 +19,10 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+
+  match '/users',   to: 'users#index',   via: 'get'
+  match '/users/:id',     to: 'users#show',       via: 'get'
+
+  resources :users, :only => [:show]
 
 end
