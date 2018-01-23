@@ -1,0 +1,35 @@
+<div class="carousel carousel-slider center blue-grey lighten-5" data-indicators="true">
+  <% @users.sample(3).each do |u| %>
+    <div class="carousel-item center">
+      <div class="container">
+        <h4>
+          <%= u.first_name + ' ' + u.last_name %>
+        </h4>
+        <div id="bio">
+          <p class="grey-text">bio</p>
+          <p>
+            <% if u.bio.nil? || u.bio.empty?%>
+              <%= "this person does not have a bio" %>
+            <% else %>
+              <%= u.bio %>
+            <% end %>
+          </p>
+        </div>      
+        <div id="skills">
+          <p class="grey-text">skills</p>
+          <p>
+            <% if u.skills.nil? || u.skills.empty?%>
+              <%= "this person does not have any skills" %>
+            <% else %>
+              <%= u.skills %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $('.carousel.carousel-slider').carousel({fullWidth: true});
+</script>

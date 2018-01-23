@@ -1,5 +1,9 @@
 <%= render partial: '/layouts/navbar' %>
 
+<% if user_signed_in? %>
+  <%= render partial: '/layouts/rand_users' %>
+<% end %>
+
 <div class="container">
       <h3>Setup</h3>
       <p>
